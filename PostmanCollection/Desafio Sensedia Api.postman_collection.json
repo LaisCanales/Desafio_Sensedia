@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "cdabe34c-25ed-4176-be2b-9a115d0c1e34",
+		"name": "Desafio Sensedia",
+		"description": "Lais Alana",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Geração do token de acesso",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://graph.facebook.com/oauth/access_token?client_id=502615973563951&client_secret=580298aaf04b50c44ceba8d0f5936683&redirect_uri=http://localhost:8080&grant_type=client_credentials",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"facebook",
+						"com"
+					],
+					"path": [
+						"oauth",
+						"access_token"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "502615973563951"
+						},
+						{
+							"key": "client_secret",
+							"value": "580298aaf04b50c44ceba8d0f5936683"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:8080"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Post Page",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://graph.facebook.com/v3.2/334233210492090_334390007143077/?message=update novamente&access_token=EAAHJIGaQDi8BANchVM3HrZAwPzwbf3i7ENb48MZCincKUNtQRV5kQAlCbwreFec1ezxnzIYB1YZB1Y3VTKUvzzxQaMky7rkCAGhZC9YZCu3ZAZAMZC8NfzeJeAe6ugU2fzZAdkisFajX9wDYUXDZBCv3UGgz5WZCEGOImCMom2YOdyCNADZC1hOqTFBuqGsy9KwZAbZCgZD",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"facebook",
+						"com"
+					],
+					"path": [
+						"v3.2",
+						"334233210492090_334390007143077",
+						""
+					],
+					"query": [
+						{
+							"key": "message",
+							"value": "update novamente"
+						},
+						{
+							"key": "access_token",
+							"value": "EAAHJIGaQDi8BANchVM3HrZAwPzwbf3i7ENb48MZCincKUNtQRV5kQAlCbwreFec1ezxnzIYB1YZB1Y3VTKUvzzxQaMky7rkCAGhZC9YZCu3ZAZAMZC8NfzeJeAe6ugU2fzZAdkisFajX9wDYUXDZBCv3UGgz5WZCEGOImCMom2YOdyCNADZC1hOqTFBuqGsy9KwZAbZCgZD"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Post Page",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://graph.facebook.com/v3.2/334233210492090_334393790476032/?access_token=EAAHJIGaQDi8BANchVM3HrZAwPzwbf3i7ENb48MZCincKUNtQRV5kQAlCbwreFec1ezxnzIYB1YZB1Y3VTKUvzzxQaMky7rkCAGhZC9YZCu3ZAZAMZC8NfzeJeAe6ugU2fzZAdkisFajX9wDYUXDZBCv3UGgz5WZCEGOImCMom2YOdyCNADZC1hOqTFBuqGsy9KwZAbZCgZD",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"facebook",
+						"com"
+					],
+					"path": [
+						"v3.2",
+						"334233210492090_334393790476032",
+						""
+					],
+					"query": [
+						{
+							"key": "message",
+							"value": "update novamente",
+							"disabled": true
+						},
+						{
+							"key": "access_token",
+							"value": "EAAHJIGaQDi8BANchVM3HrZAwPzwbf3i7ENb48MZCincKUNtQRV5kQAlCbwreFec1ezxnzIYB1YZB1Y3VTKUvzzxQaMky7rkCAGhZC9YZCu3ZAZAMZC8NfzeJeAe6ugU2fzZAdkisFajX9wDYUXDZBCv3UGgz5WZCEGOImCMom2YOdyCNADZC1hOqTFBuqGsy9KwZAbZCgZD"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "8019b132-189b-4e44-a2f9-6343490de827",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "6d965778-c2f1-4bec-b66d-6d2287e90b68",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
